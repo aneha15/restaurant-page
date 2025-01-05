@@ -3,29 +3,26 @@ import './style.css';
 import homepage from './home.js';
 import menupage from './menu.js';
 import aboutpage from './about.js';
-// import load from './pageload';
 
 const tabSwitch = function () {
     const content = document.querySelector('#content');
-    const home = document.querySelector('.home');
-    const menu = document.querySelector('.menu');
-    const about = document.querySelector('.about');
+
+    const pages = {
+        hometab: homepage,
+        menutab: menupage,
+        abouttab: aboutpage,
+    }
 
     homepage();
 
-    home.addEventListener('click', () => {
-        content.textContent = '';
-        homepage();
-    });
-    menu.addEventListener('click', () => {
-        content.textContent = '';
-        menupage();
+    Object.keys(pages).forEach(key => {
+        const page = document.getElementById(key);
+        page.addEventListener('click', () => {
+            content.textContent = '';
+            pages[key]();
+        });
     });
 
-    about.addEventListener('click', () => {
-        content.textContent = '';
-        aboutpage();
-    });
 };
 
 
