@@ -1,3 +1,5 @@
 import './style.css';
 
-console.log('Restaurant page');
+import load from './pageload';
+
+load();

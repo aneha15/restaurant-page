@@ -8,7 +8,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    
+
 }
 
 header {
@@ -16,7 +16,7 @@ header {
     justify-content: center;
     padding: 30px;
     background-color: rgba(239, 207, 227);
-    margin-bottom: 45px;
+    margin-bottom: 75px;
 }
 
 nav {
@@ -28,7 +28,7 @@ nav {
     background-color: rgba(190, 86, 131, 0.5);
 }
 
-header > nav > * {
+header>nav>* {
     background: none;
     border: none;
     height: 35px;
@@ -36,4 +36,23 @@ header > nav > * {
     font-size: 16px;
     font-weight: 600;
     color: rgba(255, 255, 255);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+#content > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(206, 195, 200);
+
+    p {
+        font-style: italic;
+    }
 }
