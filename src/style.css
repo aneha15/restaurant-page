@@ -43,16 +43,25 @@ header>nav>* {
     justify-content: center;
 }
 
-#content > * {
+#content>* {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 50px;
+    padding: 45px 65px;
     border-radius: 10px;
     background-color: rgba(206, 195, 200);
+}
 
-    p {
-        font-style: italic;
+#home>p {
+    font-style: italic;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    ul > * {
+        margin-bottom: 10px;
     }
 }
